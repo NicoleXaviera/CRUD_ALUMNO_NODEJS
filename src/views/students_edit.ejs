@@ -1,0 +1,41 @@
+<%- include("partials/_header") %>
+
+
+<div class="container mt-5">
+  <div class="row">
+    <h1>Agregar nuevo estudiante</h1>
+    <div class="col-md-5 offset-md-3 card bg-dark">
+      <div class="card-body">
+        <form action="/update/<%= student.id %>" method="POST">
+          <input
+            type="text"
+            name="name"
+            value="<%= student.name %>"
+            placeholder="Nombre"
+            class="form-control mb-3"
+            autofocus
+          />
+          <input
+            type="text"
+            name="Direccion"
+            value="<%= student.address %>"
+            placeholder="Address"
+            class="form-control mb-3"
+          />
+          <input
+            type="text"
+            name="Telefono"
+            value="<%= student.phone %>"
+            placeholder="Phone"
+            class="form-control mb-3"
+          />
+
+          <button type="submit" class="btn btn-primary">Guardar estudiante</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/_footer") %>
+
